@@ -1,0 +1,66 @@
+xrun(64): 20.09-s012: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s012: Started on Mar 27, 2024 at 19:46:26 IST
+xrun
+	-access +rwc
+	../TB/rca_tb.sv
+	../RTL/full_adder.sv
+	../RTL/d_ff.sv
+	../RTL/rca.sv
+	-gui
+file: ../TB/rca_tb.sv
+	module worklib.rca_tb:sv
+		errors: 0, warnings: 0
+file: ../RTL/full_adder.sv
+	module worklib.full_adder:sv
+		errors: 0, warnings: 0
+file: ../RTL/d_ff.sv
+	module worklib.d_ff:sv
+		errors: 0, warnings: 0
+file: ../RTL/rca.sv
+	module worklib.rca:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		rca_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.d_ff:sv <0x022e455a>
+			streams:   2, words:   418
+		worklib.full_adder:sv <0x3b2e90a8>
+			streams:   0, words:     0
+		worklib.rca_tb:sv <0x44837ee5>
+			streams:  11, words:  6825
+		worklib.rca:sv <0x466e1868>
+			streams:   6, words:  1584
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  11       4
+		Registers:                14      10
+		Scalar wires:             35       -
+		Expanded wires:           12       3
+		Always blocks:             5       1
+		Initial blocks:            2       2
+		Cont. assignments:         1       3
+		Pseudo assignments:       24      12
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.rca_tb:sv
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/installs/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm rca_tb.clk_i rca_tb.rst_i rca_tb.a_i rca_tb.b_i rca_tb.c_i rca_tb.c_o rca_tb.s_o
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 147500 PS + 0
+../TB/rca_tb.sv:79 	#20 $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	20.09-s012: Exiting on Mar 27, 2024 at 19:48:07 IST  (total: 00:01:41)

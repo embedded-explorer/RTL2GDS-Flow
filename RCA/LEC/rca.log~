@@ -1,0 +1,97 @@
+                          CONFORMAL (R)
+                   Version 20.20-s200 (01-Feb-2021) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2020. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1146 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.32    seconds
+Elapse time  : 2       seconds
+Memory usage : 92.94   M bytes
+// Command: read library ../LIB_VERILOG/slow_vdd1v2_basicCells.v -verilog -both
+// Parsing file ../LIB_VERILOG/slow_vdd1v2_basicCells.v ...
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:120)
+// Note: (VLG8) Buffer inserted (occurrence:1392)
+// Note: (VLG9.2) The `define macro is used (occurrence:14)
+// Warning: (UDP3.2) Primitive has unspecified term(s) (occurrence:4)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:489)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:1020)
+// Note: (DIR6.3) Conditional compiler directive clause is effective (occurrence:14)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:2)
+// Warning: (HRC3.2a) Module/entity has no I/O ports (occurrence:9)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.47    seconds
+Elapse time  : 2       seconds
+Memory usage : 120.61  M bytes
+// Command: read design ../RTL/rca.sv ../RTL/full_adder.sv ../RTL/d_ff.sv -systemverilog -golden
+// Parsing file ../RTL/rca.sv ...
+// Parsing file ../RTL/full_adder.sv ...
+// Parsing file ../RTL/d_ff.sv ...
+// Golden root module is set to 'rca'
+// Note: Read VERILOG design successfully
+// Command: read design ../SYN/outputs/rca_netlist.v -verilog -revised
+// Parsing file ../SYN/outputs/rca_netlist.v ...
+// Revised root module is set to 'rca'
+// Note: Read VERILOG design successfully
+// Command: add pin constraints 0 SE  -revised
+// Command: add ignored inputs scan_in -revised
+// Command: add ignored outputs scan_out -revised
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 21
+// Revised key points = 22
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            11     5      5         21      
+--------------------------------------------------------------------------------
+Revised           11     5      5         21      
+================================================================================
+Unmapped points:
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   PI        Total   
+--------------------------------------------------------------------------------
+Extra             1         1       
+================================================================================
+// Command: add compared points -all
+// 10 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           5      5         10      
+================================================================================
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 1
+     Command "add ignore outputs" used:                        yes
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+================================================================================
+// Command: exit

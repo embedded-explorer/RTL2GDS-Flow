@@ -1,0 +1,10 @@
+CELLTYPE                                                         00000007
+FAULTS                                                           00000001
+LTYPE                                                            00000002
+PFLT                                                             00000010
+SOURCE_BUSLIST                                                   00000001
+SOURCE_PORTLIST                                                  00000007
+TB_METAPRIMITIVE                                                 00000001
+TB_SYMBOL                                                        00000001
+TFLT                                                             00000010
+ZDLY                                                             00000002

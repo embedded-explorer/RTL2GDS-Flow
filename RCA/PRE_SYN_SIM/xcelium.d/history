@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(27Mar2024:19:46:26):( xrun -access +rwc ../TB/rca_tb.sv ../RTL/full_adder.sv ../RTL/d_ff.sv ../RTL/rca.sv -gui )

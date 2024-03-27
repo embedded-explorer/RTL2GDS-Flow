@@ -1,0 +1,11 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-access
++rwc
+../TB/rca_tb.sv
+../RTL/full_adder.sv
+../RTL/d_ff.sv
+../RTL/rca.sv
+-gui

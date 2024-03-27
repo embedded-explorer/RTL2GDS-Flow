@@ -1,0 +1,9 @@
+define XMSIMRC	( /home/installs/XCELIUM2009/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+define AMSRC	( /home/installs/XCELIUM2009/tools/xcelium/files/amsrc, ~/.amsrc )
+include ./hdlrun.var
+include ./xllibs/hdl.var
+define SNAPSHOT worklib.rca_tb:sv
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ($LIB_MAP, + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.rca_tb:sv

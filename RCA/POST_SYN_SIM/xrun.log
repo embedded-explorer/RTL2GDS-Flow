@@ -1,0 +1,96 @@
+xrun(64): 20.09-s012: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s012: Started on Mar 27, 2024 at 20:09:36 IST
+xrun
+	-access +rwc
+	../TB/rca_tb.sv
+	../SYN/outputs/rca_netlist.v
+	-v ../LIB_VERILOG/slow_vdd1v0_basicCells.v
+	-mess
+	-define POST_SYN_SIM
+	-gui
+file: ../TB/rca_tb.sv
+	module worklib.rca_tb:sv
+		errors: 0, warnings: 0
+file: ../SYN/outputs/rca_netlist.v
+	module worklib.rca:v
+		errors: 0, warnings: 0
+file: ../LIB_VERILOG/slow_vdd1v0_basicCells.v
+	module slow_vdd1v0_basicCells.ADDFX1:v
+		errors: 0, warnings: 0
+	module slow_vdd1v0_basicCells.NOR2BX1:v
+		errors: 0, warnings: 0
+	module slow_vdd1v0_basicCells.SDFFQX1:v
+		errors: 0, warnings: 0
+	primitive slow_vdd1v0_basicCells.altos_dff_err:v
+		errors: 0, warnings: 0
+	primitive slow_vdd1v0_basicCells.altos_dff:v
+		errors: 0, warnings: 0
+		Caching library 'slow_vdd1v0_basicCells' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		rca_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "../SYN/outputs/delays.sdf"
+	Writing compiled SDF file to "delays.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     delays.sdf.X
+		Log file:              post_syn_sim.log
+		Backannotation scope:  rca_tb.rca
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+	Annotation completed successfully...
+	SDF statistics: 
+		 No. of Pathdelays = 51      	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (51/51) 
+		 No. of Tchecks    = 40      	 No. of Disabled Tchecks    = 0        Annotated = 75.00% (30/40) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	            51	             0	                51	                100.00
+		      $width	            10	             0	                 0	                  0.00
+		  $setuphold	            30	             0	                30	                100.00
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.rca:v <0x72c3c8b0>
+			streams:   0, words:     0
+		worklib.rca_tb:sv <0x048c3035>
+			streams:  17, words:  8682
+		slow_vdd1v0_basicCells.SDFFQX1:v <0x48e500e8>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                   16       5
+		UDPs:                      10       2
+		Primitives:                60       5
+		Timing outputs:            18       4
+		Registers:                 15      13
+		Scalar wires:              31       -
+		Expanded wires:            12       3
+		Initial blocks:             5       5
+		Cont. assignments:          0       1
+		Pseudo assignments:        10      10
+		Timing checks:             70      12
+		Interconnect:              42       -
+		Delayed tcheck signals:    20      12
+		Simulation timescale:    10ps
+	Writing initial simulation snapshot: worklib.rca_tb:sv
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/installs/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm rca_tb.a_i rca_tb.b_i rca_tb.c_i rca_tb.c_o rca_tb.clk_i rca_tb.rst_i rca_tb.s_o rca_tb.scan_en rca_tb.scan_in rca_tb.scan_out
+Created probe 1
+xcelium> run
+Simulation complete via $finish(1) at time 147500 PS + 0
+../TB/rca_tb.sv:79 	#20 $finish;
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	20.09-s012: Exiting on Mar 27, 2024 at 20:10:53 IST  (total: 00:01:17)

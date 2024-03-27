@@ -1,0 +1,13 @@
+======================================================================
+
+Annotating SDF timing data:
+  Compiled SDF file:     delays.sdf.X
+  Log file:              post_syn_sim.log
+  Backannotation scope:  rca_tb.rca
+  Configuration file:    
+  MTM control:           MAXIMUM
+  Scale factors:         
+  Scale type:            
+
+Time units: 1ns
+

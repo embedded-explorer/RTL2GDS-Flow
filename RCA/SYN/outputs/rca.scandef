@@ -1,0 +1,22 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN rca ;
+
+SCANCHAINS 1 ;
+  - top_chain_seg1_clk_i_rising 
+    + PARTITION p_clk_i_rising 
+      MAXBITS 5
+    + START PIN scan_in
+    + FLOATING 
+       genblk2[0].reg_s_q_o_reg ( IN SI ) ( OUT Q ) 
+       genblk2[1].reg_s_q_o_reg ( IN SI ) ( OUT Q ) 
+       genblk2[2].reg_s_q_o_reg ( IN SI ) ( OUT Q ) 
+       genblk2[3].reg_s_q_o_reg ( IN SI ) ( OUT Q ) 
+       reg_c_q_o_reg ( IN SI ) ( OUT Q ) 
+    + STOP PIN scan_out
+;
+
+END SCANCHAINS 
+END DESIGN 

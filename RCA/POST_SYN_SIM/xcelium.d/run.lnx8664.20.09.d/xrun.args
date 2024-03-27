@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-access
++rwc
+../TB/rca_tb.sv
+../SYN/outputs/rca_netlist.v
+-v
+../LIB_VERILOG/slow_vdd1v0_basicCells.v
+-mess
+-define
+POST_SYN_SIM
+-gui
