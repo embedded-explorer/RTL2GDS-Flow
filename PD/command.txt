@@ -1,0 +1,54 @@
+simulation :
+xrun +access+rwc <fname> <testname> +gui
+
+synthesis:
+genus -f genus_script.tcl 
+
+to see schematic
+gui_show
+
+if files are not copied : copy netlist from synthesis/outputs/,name._netlist
+          to STA folder
+
+to do all steps after synthesis:
+innovus -stylus -file pd.tcl
+
+once layout is visible: then click on timing / debug timings
+select hold/ok.
+
+if hold violations are there then to debug:
+
+#write_db -rc_extract -def postRoute
+
+# go to new window  csh source then
+
+#tempus -stylus -eco -file tempus_signoff.tcl
+
+# in  same innovus old window:
+#source eco_innovus.tcl
+#route_global_detail
+#route_fix_signoff_drc
+
+
+
+# Add Filler Cells
+#add_fillers -base_cells FILL8 FILL64 FILL4 FILL32 FILL2 FILL16 FILL1 -prefix FILLER
+
+in layout window
+file > save netlist> name
+
+file > save gds> to see gds file
+
+
+once netlistr is generated copy thsat netlist to simulation foldera nd run the simulation with testbench.
+xrun +access+rwc <fname_netlist> <testname> +gui
+
+get file if needed:
+git clone https://github.com/akhileshkumarp/svcodes.git
+
+
+
+to copy from one pc to pc:
+scp filenam.zip  destination address(MVT.):./foldername
+
+
